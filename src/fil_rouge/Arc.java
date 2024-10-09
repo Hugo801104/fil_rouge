@@ -1,10 +1,10 @@
 package fil_rouge;
 
-public class Arc {
+public abstract class Arc {
 	protected Place place;
-	protected Integer poids;
+	protected int poids;
 	
-	public Arc(Place place, Integer poids) {
+	public Arc(Place place, int poids) {
 		this.place = place;
 		this.poids = poids;
 	}
@@ -16,5 +16,7 @@ public class Arc {
 	public int getPoids() {
 		return this.poids;
 	}
+	
+	public abstract void step();
 	
 }
