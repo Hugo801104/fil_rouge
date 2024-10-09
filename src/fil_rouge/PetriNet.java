@@ -26,13 +26,13 @@ public class PetriNet {
 		this.outArcs.add(arc);
 	}
 	
-	public void addZeroArc(Place place, Integer poids) {
-		Zero arc = new Zero(place, poids);
+	public void addZeroArc(Place place) {
+		Zero arc = new Zero(place);
 		this.inArcs.add(arc);
 	}
 	
-	public void addVideurArc(Place place, Integer poids) {
-		Videur arc = new Videur(place, poids);
+	public void addVideurArc(Place place) {
+		Videur arc = new Videur(place);
 		this.inArcs.add(arc);
 	}
 	
