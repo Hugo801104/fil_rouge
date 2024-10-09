@@ -12,5 +12,29 @@ public class Transition {
 		this.outArcs = outArcs;
 	}
 	
+	public void fire() {
+		for (InArc ia : inArcs) {
+			ia.step();
+		}
+		for (OutArc ia : outArcs) {
+			ia.step();
+		}
+	}
+	
+	public void addOutArc(OutArc arc) {
+		outArcs.add(arc);
+	}
+	
+	public void addInArcNormal(InArc arc) {
+		inArcs.add(arc);
+	}
+	
+	public void addVideurArc(Videur arc) {
+		inArcs.add(arc);
+	}
+	
+	public void addZeroArc(Zero arc) {
+		inArcs.add(arc);
+	}
 	
 }
