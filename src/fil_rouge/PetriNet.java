@@ -4,40 +4,61 @@ import java.util.ArrayList;
 
 import fil_rouge.*;
 
-public class PetriNet {
+public class PetriNet implements IPetriNet {
 	
 	private ArrayList<Place> places;
 	private ArrayList<OutArc> outArcs;
 	private ArrayList<InArc> inArcs;
 	private ArrayList<Transition> transitions;
 	
-	public void addPlace(Integer jetons) {
-		Place place = new Place(jetons);
-		this.places.add(place);
+	public Place addPlace(Place p) {
+		this.places.add(p);
+		return(p);
 	}
 	
-	public void addInArcNormal(Place place, Integer poids) {
-		InArc arc = new InArc(place, poids);
-		this.inArcs.add(arc);
+	public void remPlace(Place p) {
+		this.places.remove(p);
 	}
 	
-	public void addOutArc(Place place, Integer poids) {
-		OutArc arc = new OutArc(place, poids);
+	public Transition addTransition(Transition t) {
+		this.transitions.add(t);
+		return(t);
+	}
+	
+	public void remTransition(Transition t) {
+		this.transitions.remove(t);
+	}
+	
+	public OutArc addOutArc(Place p, int poids) {
+		OutArc arc = new OutArc(p, poids);
 		this.outArcs.add(arc);
+		return arc;
 	}
 	
-	public void addZeroArc(Place place) {
-		Zero arc = new Zero(place);
+	public InArc addInArcNormal(Place p, int poids) {
+		InArc arc = new InArc(p, poids);
 		this.inArcs.add(arc);
+		return arc;
 	}
 	
-	public void addVideurArc(Place place) {
-		Videur arc = new Videur(place);
+	public Videur addVideurArc(Place p) {
+		Videur arc = new Videur(p);
 		this.inArcs.add(arc);
+		return arc;
 	}
 	
-	public void addTransition(ArrayList<InArc> inArcs, ArrayList<OutArc> outArcs) {
-		Transition transition = new Transition(inArcs, outArcs);
-		this.transitions.add(transition);
+	public Zero addZeroArc(Place p) {
+		Zero arc = new Zero(p);
+		this.inArcs.add(arc);
+		return arc;
 	}
+	
+	public void remArc(Arc a) {
+		if (a instanceof InArc) {
+			this.inArcs.remove(a);
+		} else if (a instanceof OutArc) {
+			this.outArcs.remove(a);
+		}
+	}
+	
 }

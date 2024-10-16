@@ -4,6 +4,10 @@ public class Place {
 	
 	private int jetons;
 	
+	public Place() {
+		this(0);
+	}
+	
 	/**
 	 * @param jetons
 	 */
