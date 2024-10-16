@@ -6,6 +6,11 @@ public class Videur extends InArc{
 		super(place, null);
 	}
 	
+	public Videur(Place place, Transition transition) {
+		this(place);
+		transition.addVideurArc(this);
+	}
+	
 	public void step() {
 		this.place.remJetons(this.place.getJetons());
 	}

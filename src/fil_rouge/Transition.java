@@ -12,6 +12,10 @@ public class Transition {
 		this.outArcs = outArcs;
 	}
 	
+	public Transition() {
+		this(new ArrayList<InArc>(), new ArrayList<OutArc>());
+	}
+	
 	public void fire() {
 		boolean isTrigTransition = true;
 		for (InArc ia : inArcs) {

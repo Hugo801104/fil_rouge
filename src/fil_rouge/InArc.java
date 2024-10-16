@@ -6,6 +6,11 @@ public class InArc extends Arc{
 		super(place, poids);
 	}
 
+	public InArc(Place place, Transition transition, int poids) {
+		this(place, poids);
+		transition.addInArcNormal(this);
+	}
+	
 	public void step() {
 		this.place.remJetons(this.getPoids());
 	}
