@@ -2,20 +2,36 @@ package fil_rouge;
 
 import java.util.ArrayList;
 
+/**
+ * @author Pierrick CAUSERET
+ * @author Hugo JASMIN
+ */
 public class Transition {
 	
 	private ArrayList<InArc> inArcs;
 	private ArrayList<OutArc> outArcs;
-		
+	
+	/**
+	 * Constructor with a list of inArcs and a list of outArcs
+	 * 
+	 * @param inArcs
+	 * @param outArcs
+	 */
 	public Transition(ArrayList<InArc> inArcs, ArrayList<OutArc> outArcs) {
 		this.inArcs = inArcs;
 		this.outArcs = outArcs;
 	}
 	
+	/**
+	 * Constructor with empty lists of in/outArcs
+	 */
 	public Transition() {
 		this(new ArrayList<InArc>(), new ArrayList<OutArc>());
 	}
 	
+	/**
+	 * The function verifies if the transition can be triggered and if it is able to, it runs the transition
+	 */
 	public void fire() {
 		boolean isTrigTransition = true;
 		for (InArc ia : inArcs) {

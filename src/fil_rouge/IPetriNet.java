@@ -1,5 +1,9 @@
 package fil_rouge;
 
+/**
+ * @author Pierrick CAUSERET
+ * @author Hugo JASMIN
+ */
 public interface IPetriNet {
 	
 	/**

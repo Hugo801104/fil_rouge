@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import fil_rouge.*;
 
+/**
+ * @author Pierrick CAUSERET
+ * @author Hugo JASMIN
+ */
 public class PetriNet implements IPetriNet {
 	
 	private ArrayList<Place> places;
