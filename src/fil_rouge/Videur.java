@@ -2,8 +2,6 @@ package fil_rouge;
 
 public class Videur extends InArc{
 	
-	private Place place;
-	
 	public Videur(Place place) {
 		super(place, null);
 	}

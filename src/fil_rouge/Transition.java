@@ -12,6 +12,7 @@ public class Transition {
 		this.outArcs = outArcs;
 	}
 	
+	//no
 	public void fire() {
 		for (InArc ia : inArcs) {
 			ia.step();

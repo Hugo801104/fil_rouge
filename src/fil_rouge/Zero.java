@@ -1,15 +1,13 @@
 package fil_rouge;
 
 public class Zero extends InArc{
-	
-	private Place place;
 
 	public Zero(Place place) {
 		super(place, 0);
 	}
 	
 	public void step() {
-		this.place.remJetons(0);
+		this.place.remJetons(0); //not necessary to write this line
 	}
 	
 	public boolean isTrig() {
