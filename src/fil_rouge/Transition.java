@@ -12,13 +12,20 @@ public class Transition {
 		this.outArcs = outArcs;
 	}
 	
-	//no
 	public void fire() {
+		boolean isTrigTransition = true;
 		for (InArc ia : inArcs) {
-			ia.step();
+			isTrigTransition = isTrigTransition && ia.isTrig();
 		}
-		for (OutArc ia : outArcs) {
-			ia.step();
+		if (isTrigTransition) {
+			for (InArc ia : inArcs) {
+				ia.step();
+			}
+			for (OutArc ia : outArcs) {
+				ia.step();
+			}
+		} else {
+			System.out.println("Transition not triggerable");
 		}
 	}
 	
