@@ -14,6 +14,17 @@ public class PetriNet implements IPetriNet {
 	private ArrayList<OutArc> outArcs;
 	private ArrayList<InArc> inArcs;
 	private ArrayList<Transition> transitions;
+
+	/**
+	 * The default constructor
+	 * 
+	 */
+	public PetriNet() {
+		this.places = new ArrayList<Place>();
+		this.outArcs = new ArrayList<OutArc>();
+		this.inArcs = new ArrayList<InArc>();
+		this.transitions = new ArrayList<Transition>();
+	}
 	
 	public Place addPlace(Place p) {
 		this.places.add(p);
