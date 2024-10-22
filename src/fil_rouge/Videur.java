@@ -7,7 +7,7 @@ package fil_rouge;
 public class Videur extends InArc{
 	
 	public Videur(Place place) {
-		super(place, null);
+		super(place, 0);
 	}
 	
 	/**

@@ -6,7 +6,7 @@ package fil_rouge;
  */
 public class InArc extends Arc{
 	
-	public InArc(Place place, Integer poids) {
+	public InArc(Place place, int poids) {
 		super(place, poids);
 	}
 
