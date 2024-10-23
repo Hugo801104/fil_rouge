@@ -4,9 +4,9 @@ package fil_rouge;
  * @author Pierrick CAUSERET
  * @author Hugo JASMIN
  */
-public class Videur extends InArc{
+public class Empty extends InArc{
 	
-	public Videur(Place place) {
+	public Empty(Place place) {
 		super(place, 0);
 	}
 	
@@ -16,22 +16,22 @@ public class Videur extends InArc{
 	 * @param place
 	 * @param transition
 	 */
-	public Videur(Place place, Transition transition) {
+	public Empty(Place place, Transition transition) {
 		this(place);
-		transition.addVideurArc(this);
+		transition.addEmptyArc(this);
 	}
 	
 	/**
 	 * The method empties the place
 	 */
 	public void step() {
-		this.place.remJetons(this.place.getJetons());
+		this.place.remTokens(this.place.getTokens());
 	}
 	
 	/**
 	 * @return true if the arc does have some tokens, false else
 	 */
 	public boolean isTrig() {
-		return this.place.getJetons() > 0;
+		return this.place.getTokens() > 0;
 	}
 }

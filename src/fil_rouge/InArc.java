@@ -6,8 +6,8 @@ package fil_rouge;
  */
 public class InArc extends Arc{
 	
-	public InArc(Place place, int poids) {
-		super(place, poids);
+	public InArc(Place place, int weight) {
+		super(place, weight);
 	}
 
 	/**
@@ -15,10 +15,10 @@ public class InArc extends Arc{
 	 * 
 	 * @param place
 	 * @param transition
-	 * @param poids
+	 * @param weight
 	 */
-	public InArc(Place place, Transition transition, int poids) {
-		this(place, poids);
+	public InArc(Place place, Transition transition, int weight) {
+		this(place, weight);
 		transition.addInArcNormal(this);
 	}
 	
@@ -26,13 +26,13 @@ public class InArc extends Arc{
 	 * The method remove the number of tokens needed to fire the transition
 	 */
 	public void step() {
-		this.place.remJetons(this.getPoids());
+		this.place.remTokens(this.getWeight());
 	}
 	
 	/**
 	 * @return true if the arc is triggerable, false else
 	 */
 	public boolean isTrig() {
-		return this.getPoids() <= this.place.getJetons();
+		return this.getWeight() <= this.place.getTokens();
 	}
 }

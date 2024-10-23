@@ -8,34 +8,34 @@ package fil_rouge;
  */
 public abstract class Arc {
 	protected Place place;
-	protected int poids;
+	protected int weight;
 	
 	/**
 	 * Constructor of an arc
 	 * 
 	 * @param place
-	 * @param poids
+	 * @param weight
 	 */
-	public Arc(Place place, int poids) {
+	public Arc(Place place, int weight) {
 		this.place = place;
-		this.poids = poids;
+		this.weight = weight;
 	}
 	
 	/**
 	 * Set the weight of the arc
 	 * 
-	 * @param poids
+	 * @param weight
 	 */
-	public void setPoids(int poids) {
-		this.poids = poids;
+	public void setWeight(int weight) {
+		this.weight = weight;
 	}
 	
 	/**
 	 * 
 	 * @return the weight of the arc
 	 */
-	public int getPoids() {
-		return this.poids;
+	public int getWeight() {
+		return this.weight;
 	}
 	
 	/**

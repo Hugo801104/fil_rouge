@@ -57,7 +57,7 @@ public class Transition {
 		inArcs.add(arc);
 	}
 	
-	public void addVideurArc(Videur arc) {
+	public void addEmptyArc(Empty arc) {
 		inArcs.add(arc);
 	}
 	

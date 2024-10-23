@@ -6,8 +6,8 @@ package fil_rouge;
  */
 public class OutArc extends Arc{
 	
-	public OutArc(Place place, int poids) {
-		super(place, poids);
+	public OutArc(Place place, int weight) {
+		super(place, weight);
 	}
 	
 	/**
@@ -15,10 +15,10 @@ public class OutArc extends Arc{
 	 * 
 	 * @param place
 	 * @param transition
-	 * @param poids
+	 * @param weight
 	 */
-	public OutArc(Place place, Transition transition, int poids) {
-		this(place, poids);
+	public OutArc(Place place, Transition transition, int weight) {
+		this(place, weight);
 		transition.addOutArc(this);
 	}
 	
@@ -26,6 +26,6 @@ public class OutArc extends Arc{
 	 * The method add the number of tokens needed when the transition if fired
 	 */
 	public void step() {
-		this.place.addJetons(this.getPoids());
+		this.place.addTokens(this.getWeight());
 	}
 }

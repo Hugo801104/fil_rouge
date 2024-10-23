@@ -4,17 +4,22 @@ package fil_rouge;
  * @author Pierrick CAUSERET
  * @author Hugo JASMIN
  */
-public class NegativeJetonsException extends UnsupportedOperationException {
+public class NegativeTokensException extends UnsupportedOperationException {
 	
 	/*
 	 * extends UnsupportedOperationException because it can allow us after to not consider try catch every time
 	 */
 	
-	public NegativeJetonsException() {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public NegativeTokensException() {
 		super();
 	}
 	
-	public NegativeJetonsException(String s) {
+	public NegativeTokensException(String s) {
 		super(s);
 	}
 }

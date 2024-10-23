@@ -37,30 +37,30 @@ public interface IPetriNet {
 	/**
 	 * Add the Arc a to the PetriNet
 	 * 
-	 * @param p the Place links to the Arc
-	 * @param poids the poids of the arc
+	 * @param p the Place linked to the Arc
+	 * @param weight the weight of the arc
 	 */
-	OutArc addOutArc(Place p, int poids); // ou void addOutArc(...)
+	OutArc addOutArc(Place p, int weight); // ou void addOutArc(...)
 	
 	/**
 	 * Add the Arc a to the PetriNet
 	 * 
-	 * @param p the Place links to the Arc
-	 * @param poids the poids of the arc
+	 * @param p the Place linked to the Arc
+	 * @param weight the weight of the arc
 	 */
-	InArc addInArcNormal(Place p, int poids);
+	InArc addInArcNormal(Place p, int weight);
 	
 	/**
 	 * Add the Arc a to the PetriNet
 	 * 
-	 * @param p the Place links to the Arc
+	 * @param p the Place linked to the Arc
 	 */
-	Videur addVideurArc(Place p);
+	Empty addEmptyArc(Place p);
 	
 	/**
 	 * Add the Arc a to the PetriNet
 	 * 
-	 * @param p the Place links to the Arc
+	 * @param p the Place linked to the Arc
 	 */
 	Zero addZeroArc(Place p);
 	

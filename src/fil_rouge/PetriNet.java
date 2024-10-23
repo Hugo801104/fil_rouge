@@ -2,8 +2,6 @@ package fil_rouge;
 
 import java.util.ArrayList;
 
-import fil_rouge.*;
-
 /**
  * @author Pierrick CAUSERET
  * @author Hugo JASMIN
@@ -44,20 +42,20 @@ public class PetriNet implements IPetriNet {
 		this.transitions.remove(t);
 	}
 	
-	public OutArc addOutArc(Place p, int poids) {
-		OutArc arc = new OutArc(p, poids);
+	public OutArc addOutArc(Place p, int weight) {
+		OutArc arc = new OutArc(p, weight);
 		this.outArcs.add(arc);
 		return arc;
 	}
 	
-	public InArc addInArcNormal(Place p, int poids) {
-		InArc arc = new InArc(p, poids);
+	public InArc addInArcNormal(Place p, int weight) {
+		InArc arc = new InArc(p, weight);
 		this.inArcs.add(arc);
 		return arc;
 	}
 	
-	public Videur addVideurArc(Place p) {
-		Videur arc = new Videur(p);
+	public Empty addEmptyArc(Place p) {
+		Empty arc = new Empty(p);
 		this.inArcs.add(arc);
 		return arc;
 	}

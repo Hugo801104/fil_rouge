@@ -6,49 +6,49 @@ package fil_rouge;
  */
 public class Place {
 	
-	private int jetons;
+	private int tokens;
 	
 	public Place() {
 		this(0);
 	}
 	
 	/**
-	 * @param jetons
+	 * @param tokens
 	 */
-	//@requires jetons >= 0;
-	public Place(int jetons) throws NegativeJetonsException {
-		if (jetons<=0) throw new NegativeJetonsException("Place cant have jetons<=0!");
-		this.jetons = jetons;
+	//@requires tokens >= 0;
+	public Place(int tokens) throws NegativeTokensException {
+		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<=0!");
+		this.tokens = tokens;
 	}
 
 	/**
-	 * @return the jetons
+	 * @return the tokens
 	 */
-	public int getJetons() {
-		return jetons;
+	public int getTokens() {
+		return tokens;
 	}
 
 	/**
-	 * @param jetons the jetons to set
+	 * @param tokens the tokens to set
 	 */
 	
-	//@requires jetons >= 0;
-	public void setJetons(int jetons) throws NegativeJetonsException {
-		if (jetons<=0) throw new NegativeJetonsException("Place cant have jetons<=0!");
-		this.jetons = jetons;
+	//@requires tokens >= 0;
+	public void setTokens(int tokens) throws NegativeTokensException {
+		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<=0!");
+		this.tokens = tokens;
 	}
 	
-	//@requires i >= 0;
-	public void addJetons(int jetons) throws NegativeJetonsException {
-		if (jetons<=0) throw new NegativeJetonsException("Cant have parameter jetons<=0!");
-		this.jetons = this.jetons + jetons;
+	//@requires tokens >= 0;
+	public void addTokens(int tokens) throws NegativeTokensException {
+		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<=0!");
+		this.tokens += tokens;
 	}
 	
-	//@requires i >= 0;
-	//@requires i <= this.jetons;
-	public void remJetons(int jetons) throws NegativeJetonsException {
-		if (jetons<=0) throw new NegativeJetonsException("Cant have parameter jetons<=0!");
-		//normally, we always have i<=this.jetons
-		this.jetons = this.jetons - jetons;
+	//@requires tokens >= 0;
+	//@requires tokens <= this.tokens;
+	public void remTokens(int tokens) throws NegativeTokensException {
+		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<=0!");
+		//normally, we always have tokens<=this.tokens (else isTrig = false)
+		this.tokens -= tokens;
 	}
 }

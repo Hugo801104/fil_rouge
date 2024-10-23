@@ -25,14 +25,14 @@ public class Zero extends InArc{
 	 * The method does nothing
 	 */
 	public void step() {
-		this.place.remJetons(0); //not necessary to write this line
+		this.place.remTokens(0); //not necessary to write this line
 	}
 	
 	/**
 	 * @return true if the arc does not have any token, false else
 	 */
 	public boolean isTrig() {
-		return this.place.getJetons() == 0;
+		return this.place.getTokens() == 0;
 	}
 
 }
