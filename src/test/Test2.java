@@ -21,6 +21,8 @@ public class Test2 {
 		t1.fire();
 		System.out.println("Nombre de jetons final de p1 : "+p1.getTokens());
 		System.out.println("Nombre de jetons final de p2 : "+p2.getTokens());
+		
+		//le commentaire pour voir, avant d'ajouter la biblio JUnit chez moi
 	}
 
 }
