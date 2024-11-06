@@ -23,6 +23,7 @@ public class Test2 {
 		System.out.println("Nombre de jetons final de p2 : "+p2.getTokens());
 		
 		//le commentaire pour voir, avant d'ajouter la biblio JUnit chez moi
+		//ce commentaire est écrit juste après avoir ajouter la bibliothèque JUnit 5 sur mon projet local
 	}
 
 }
