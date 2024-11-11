@@ -62,7 +62,6 @@ class PetriNetTest {
         assertEquals(3, ia.getWeight());
         assertTrue(t1.isLinked(p1));
         petriNet.addInArcNormal(p1, t1, 5);
-        System.out.println(t1.getTheLinkOut(p1).getWeight());
         assertEquals(t1.getTheLinkOut(p1).getWeight(),5);
     }
 
@@ -72,7 +71,6 @@ class PetriNetTest {
         assertTrue(petriNet.getInArcs().contains(e));
         assertTrue(t1.isLinked(p1));
         petriNet.addInArcNormal(p1, t1, 5);
-        System.out.println(t1.getTheLinkOut(p1).getWeight());
         assertEquals(t1.getTheLinkOut(p1).getWeight(),5);
     }
 
@@ -82,7 +80,6 @@ class PetriNetTest {
         assertTrue(petriNet.getInArcs().contains(z));
         assertTrue(t1.isLinked(p1));
         petriNet.addInArcNormal(p1, t1, 5);
-        System.out.println(t1.getTheLinkOut(p1).getWeight());
         assertEquals(t1.getTheLinkOut(p1).getWeight(),5);
     }
 
@@ -91,7 +88,6 @@ class PetriNetTest {
         OutArc oa = petriNet.addOutArc(p1, t1, 4);
         petriNet.remArc(oa);
         assertFalse(petriNet.getOutArcs().contains(oa));
-        System.out.println(t1.isInT(oa));
         assertFalse(t1.isInT(oa)); // Il y a une erreur
     }
 }
