@@ -42,28 +42,68 @@ public class PetriNet implements IPetriNet {
 		this.transitions.remove(t);
 	}
 	
-	public OutArc addOutArc(Place p, int weight) {
+	public OutArc addOutArc(Place p, Transition t, int weight) {
 		OutArc arc = new OutArc(p, weight);
-		this.outArcs.add(arc);
-		return arc;
+		//we check if there is already an arc between the place p and the transition t, and decide what to do.
+		if (t.isLinked(p)) {
+			System.out.println("there is already an OutArc between t and p");
+			//update the arc
+			t.getTheLinkOut(p).setWeight(weight);
+			return t.getTheLinkOut(p);
+		} else {
+			this.outArcs.add(arc);
+			t.addOutArc(arc);
+			return arc;
+		}
 	}
 	
-	public InArc addInArcNormal(Place p, int weight) {
+	public InArc addInArcNormal(Place p, Transition t, int weight) {
 		InArc arc = new InArc(p, weight);
-		this.inArcs.add(arc);
-		return arc;
+		if (t.isLinked(p)) {
+			System.out.println("there is already an InArc between t and p");
+			//we remove the arc, and put the new arc (because the old arc can be an specific arc like a Zero arc, by removing it is more simple)
+			this.remArc(t.getTheLinkIn(p));
+			this.inArcs.add(arc);
+			t.addInArcNormal(arc);
+			System.out.println("the arc has been change");
+			return arc;
+		} else {
+			this.inArcs.add(arc);
+			t.addInArcNormal(arc);
+			return arc;
+		}
 	}
 	
-	public Empty addEmptyArc(Place p) {
+	public Empty addEmptyArc(Place p, Transition t) {
 		Empty arc = new Empty(p);
-		this.inArcs.add(arc);
-		return arc;
+		if (t.isLinked(p)) {
+			System.out.println("there is already an InArc between t and p");
+			this.remArc(t.getTheLinkIn(p));
+			this.inArcs.add(arc);
+			t.addEmptyArc(arc);
+			System.out.println("the arc has been change");
+			return arc;
+		} else {
+			this.inArcs.add(arc);
+			t.addEmptyArc(arc);
+			return arc;
+		}
 	}
 	
-	public Zero addZeroArc(Place p) {
+	public Zero addZeroArc(Place p, Transition t) {
 		Zero arc = new Zero(p);
-		this.inArcs.add(arc);
-		return arc;
+		if (t.isLinked(p)) {
+			System.out.println("there is already an InArc between t and p");
+			this.remArc(t.getTheLinkIn(p));
+			this.inArcs.add(arc);
+			t.addZeroArc(arc);
+			System.out.println("the arc has been change");
+			return arc;
+		} else {
+			this.inArcs.add(arc);
+			t.addZeroArc(arc);
+			return arc;
+		}
 	}
 	
 	public void remArc(Arc a) {

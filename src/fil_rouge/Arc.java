@@ -39,6 +39,14 @@ public abstract class Arc {
 	}
 	
 	/**
+	 * 
+	 * @return the place of the arc
+	 */
+	public Place getPlace() {
+		return this.place;
+	}
+	
+	/**
 	 * Abstract method for the step() method
 	 */
 	public abstract void step();
