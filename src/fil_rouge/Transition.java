@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 public class Transition {
 	
-	private ArrayList<InArc> inArcs;
-	private ArrayList<OutArc> outArcs;
+	public ArrayList<InArc> inArcs;
+	public ArrayList<OutArc> outArcs;
 	
 	/**
 	 * Constructor with a list of inArcs and a list of outArcs
@@ -73,13 +73,7 @@ public class Transition {
 	 * @param a
 	 */
 	public boolean isInT(Arc a) {
-		if (a instanceof InArc) {
-			return this.inArcs.contains(a);
-		} else if (a instanceof OutArc) {
-			return this.outArcs.contains(a);
-		} else {
-			return false; //never happen
-		}
+		return this.inArcs.contains(a) || this.outArcs.contains(a);
 	}	
 	
 	/**
@@ -88,15 +82,11 @@ public class Transition {
 	 * @param a
 	 */
 	public void remArcT(Arc a) {
-		System.out.println(this.inArcs);
-		System.out.println(this.outArcs);
 		if (a instanceof InArc) {
 			this.inArcs.remove(a);
 		} else if (a instanceof OutArc) {
 			this.outArcs.remove(a);
 		}
-		System.out.println(this.inArcs);
-		System.out.println(this.outArcs);
 	}
 	
 	/**

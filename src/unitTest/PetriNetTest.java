@@ -18,6 +18,8 @@ class PetriNetTest {
         petriNet = new PetriNet();
         p1 = new Place();
         t1 = new Transition();
+        petriNet.addTransition(t1);
+        petriNet.addPlace(p1);
     }
 
     @Test
@@ -30,7 +32,6 @@ class PetriNetTest {
     @Test
     @Order(1)
     void testRemPlace() {
-        petriNet.addPlace(p1);
         petriNet.remPlace(p1);
         assertFalse(petriNet.getPlaces().contains(p1));
     }
@@ -45,7 +46,6 @@ class PetriNetTest {
     @Test
     @Order(3)
     void testRemTransition() {
-        petriNet.addTransition(t1);
         petriNet.remTransition(t1);
         assertFalse(petriNet.getTransitions().contains(t1));
     }
@@ -68,7 +68,6 @@ class PetriNetTest {
         assertTrue(petriNet.getInArcs().contains(ia));
         assertEquals(3, ia.getWeight());
         assertTrue(t1.isLinked(p1));
-        System.out.println("Test error");
         petriNet.addInArcNormal(p1, t1, 5);
         assertEquals(t1.getTheLinkIn(p1).getWeight(),5);
     }
@@ -79,9 +78,8 @@ class PetriNetTest {
         Empty e = petriNet.addEmptyArc(p1, t1);
         assertTrue(petriNet.getInArcs().contains(e));
         assertTrue(t1.isLinked(p1));
-        System.out.println("Test error");
-        petriNet.addInArcNormal(p1, t1, 5);
-        assertEquals(t1.getTheLinkIn(p1).getWeight(),5);
+        petriNet.addEmptyArc(p1, t1);
+        assertEquals(t1.getTheLinkIn(p1).getWeight(),0);
     }
 
     @Test
@@ -90,16 +88,14 @@ class PetriNetTest {
         Zero z = petriNet.addZeroArc(p1, t1);
         assertTrue(petriNet.getInArcs().contains(z));
         assertTrue(t1.isLinked(p1));
-        System.out.println("Test error");
-        petriNet.addInArcNormal(p1, t1, 5);
-        assertEquals(t1.getTheLinkIn(p1).getWeight(),5);
+        petriNet.addZeroArc(p1, t1);
+        assertEquals(t1.getTheLinkIn(p1).getWeight(),0);
     }
 
     @Test
     @Order(8)
     void testRemArc() {
         OutArc oa = petriNet.addOutArc(p1, t1, 4);
-        System.out.println("Test error");
         petriNet.remArc(oa);
         assertFalse(petriNet.getOutArcs().contains(oa));
         assertFalse(t1.isInT(oa)); // Il y a une erreur
