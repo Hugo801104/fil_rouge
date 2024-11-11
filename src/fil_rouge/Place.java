@@ -17,7 +17,7 @@ public class Place {
 	 */
 	//@requires tokens >= 0;
 	public Place(int tokens) throws NegativeTokensException {
-		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<=0!");
+		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<0!");
 		this.tokens = tokens;
 	}
 
@@ -34,20 +34,20 @@ public class Place {
 	
 	//@requires tokens >= 0;
 	public void setTokens(int tokens) throws NegativeTokensException {
-		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<=0!");
+		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<0!");
 		this.tokens = tokens;
 	}
 	
 	//@requires tokens >= 0;
 	public void addTokens(int tokens) throws NegativeTokensException {
-		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<=0!");
+		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<0!");
 		this.tokens += tokens;
 	}
 	
 	//@requires tokens >= 0;
 	//@requires tokens <= this.tokens;
 	public void remTokens(int tokens) throws NegativeTokensException {
-		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<=0!");
+		if (tokens<0) throw new NegativeTokensException("Can't have parameter tokens<0!");
 		//normally, we always have tokens<=this.tokens (else isTrig = false)
 		this.tokens -= tokens;
 	}
