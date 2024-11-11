@@ -121,7 +121,7 @@ public class Transition {
 				return ao;
 			}
 		}
-		System.out.println("There is no link between the transition and the place!");
+		System.out.println("There is no outgoing link between the transition and the place!");
 		return null;//normally never happen
 	}
 	
@@ -136,7 +136,7 @@ public class Transition {
 					return ai;
 				}
 			}
-			System.out.println("There is no link between the transition and the place!");
+			System.out.println("There is no incoming link between the transition and the place!");
 			return null;//normally never happen
 		}
 }

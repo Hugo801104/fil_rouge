@@ -49,6 +49,7 @@ class ArcTest {
 		Assertions.assertEquals(a1.getWeight(), 3);
 		a1.setWeight(5);
 		Assertions.assertEquals(a1.getWeight(), 5);
+		Assertions.assertEquals(a1.getPlace(), p1);
 	}
 	
 	@Test

@@ -19,8 +19,8 @@ public class Place {
 	 * Constructor with a given number of tokens
 	 * 
 	 * @param tokens
+	 * @requires tokens >= 0
 	 */
-	//@requires tokens >= 0;
 	public Place(int tokens) throws NegativeTokensException {
 		if (tokens<0) throw new NegativeTokensException("Place can't have tokens<0!");
 		this.tokens = tokens;

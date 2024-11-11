@@ -127,7 +127,7 @@ public class PetriNet implements IPetriNet {
 		InArc arc = new InArc(p, weight);
 		if (t.isLinked(p)) {
 			System.out.println("there is already an InArc between t and p");
-			//we remove the arc, and put the new arc (because the old arc can be a specific arc like a Zero arc, by removing it is more simple)
+			//we remove the arc, and put the new arc (because the old arc can be a specific arc like a Zero arc, by removing it, it is more simple)
 			this.remArc(t.getTheLinkIn(p));
 			this.inArcs.add(arc);
 			t.addInArcNormal(arc);
