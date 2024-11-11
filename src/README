@@ -12,6 +12,8 @@ ainsi que quelques remarques pour faire le lien entre notre conception initiale 
 Il y a tout d'abord deux bibliothèque :
  - JRE System Library : celle du jdk 21 (la version du JDK qu'on utilise).
  - JUnit 5 : pour faire des tests JUnit.
+Il y a aussi :
+ - Le rapport de relecture de nos camarades, complété par nos décisions finales.
 Il y a ensuite le package src, dans lequel se trouve : 
  - Ce fichier texte README.
  - Le package fil_rouge dans le lequel il y a notre implémentation du PetriNet.
