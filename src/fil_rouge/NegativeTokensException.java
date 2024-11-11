@@ -11,13 +11,6 @@ public class NegativeTokensException extends UnsupportedOperationException {
 	 */
 
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * Constructor with no argument
-	 */
-	public NegativeTokensException() {
-		super();
-	}
 	
 	/**
 	 * Constructor with an argument

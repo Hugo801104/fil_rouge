@@ -88,11 +88,15 @@ public class Transition {
 	 * @param a
 	 */
 	public void remArcT(Arc a) {
+		System.out.println(this.inArcs);
+		System.out.println(this.outArcs);
 		if (a instanceof InArc) {
 			this.inArcs.remove(a);
 		} else if (a instanceof OutArc) {
 			this.outArcs.remove(a);
 		}
+		System.out.println(this.inArcs);
+		System.out.println(this.outArcs);
 	}
 	
 	/**

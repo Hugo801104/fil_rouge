@@ -154,7 +154,7 @@ public class PetriNet implements IPetriNet {
 			this.remArc(t.getTheLinkIn(p));
 			this.inArcs.add(arc);
 			t.addEmptyArc(arc);
-			System.out.println("the arc has been change");
+			System.out.println("the arc has been changed");
 			return arc;
 		} else {
 			this.inArcs.add(arc);
@@ -177,7 +177,7 @@ public class PetriNet implements IPetriNet {
 			this.remArc(t.getTheLinkIn(p));
 			this.inArcs.add(arc);
 			t.addZeroArc(arc);
-			System.out.println("the arc has been change");
+			System.out.println("the arc has been changed");
 			return arc;
 		} else {
 			this.inArcs.add(arc);
