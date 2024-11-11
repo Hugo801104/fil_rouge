@@ -28,4 +28,5 @@ public class OutArc extends Arc{
 	public void step() {
 		this.place.addTokens(this.getWeight());
 	}
+	
 }

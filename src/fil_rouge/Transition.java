@@ -95,4 +95,48 @@ public class Transition {
 		}
 	}
 	
+	/**
+	 * Return true if the transition is link by an Arc to the place p 
+	 * i.e. if there is an arc in this.outArcs or in this.inArcs which have the instance p
+	 * Else return false
+	 * @param p
+	 */
+	public boolean isLinked(Place p) {
+		boolean isLinked = false;
+		for (OutArc ao : this.outArcs) {
+			if (ao.getPlace().equals(p)) {
+				return true;
+			}
+		}
+		for (InArc ai : this.inArcs) {
+			if (ai.getPlace().equals(p)) {
+				isLinked = true;
+			}
+		}
+		return isLinked;
+	}
+	
+	//@requires this.isLinked(p)==true
+	public OutArc getTheLinkOut(Place p) {
+		OutArc wrongRes = null;
+		for (OutArc ao : this.outArcs) {
+			if (ao.getPlace().equals(p)) {
+				return ao;
+			}
+		}
+		System.out.println("There is no link between the transition and the place!");
+		return wrongRes;//normally never happen
+	}
+	
+	//@requires this.isLinked(p)==true
+		public InArc getTheLinkIn(Place p) {
+			InArc wrongRes = null;
+			for (InArc ai : this.inArcs) {
+				if (ai.getPlace().equals(p)) {
+					return ai;
+				}
+			}
+			System.out.println("There is no link between the transition and the place!");
+			return wrongRes;//normally never happen
+		}
 }
