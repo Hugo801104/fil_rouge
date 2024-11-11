@@ -16,7 +16,7 @@ Il y a ensuite le package src, dans lequel se trouve :
  - Ce fichier texte README.
  - Le package fil_rouge dans le lequel il y a notre implémentation du PetriNet.
  - Le package unitTest dans lequel nous avons fait des tests JUnit.
- - Le package test dans lequel nous avons fait quelques tests avec des méthodes main... //  à changer????
+ - Le package test dans lequel nous avons fait quelques tests avec des méthodes main, pour nous aider dans la compréhension et rédaction de notre code.
  
 2) Comment lancer notre code et lancer les test :
 Il suffit de :
