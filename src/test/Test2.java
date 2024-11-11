@@ -6,7 +6,7 @@ import fil_rouge.*;
  * @author Pierrick CAUSERET
  * @author Hugo JASMIN
  * 
- * This class try to run a PetriNet by creating an object of type PetriNet
+ * This class tries to run a PetriNet by creating an object of type PetriNet
  */
 public class Test2 {
 
@@ -25,17 +25,17 @@ public class Test2 {
 		System.out.println("Final tokens number of p1 : "+p1.getTokens());
 		System.out.println("Final tokens number of p2 : "+p2.getTokens());
 		//---------
-		System.out.println("test after the modification of the methods of adding arcs in the class PetriNet");
+		System.out.println("Test after the modification of the methods of adding arcs in the class PetriNet");
 		//---------
 		OutArc a3 = pn.addOutArc(p2, t1, 1);
 		if (a3.equals(a2)) {
-			System.out.println("ok a3 and a2 refer to the same object");
+			System.out.println("Ok, a3 and a2 refer to the same object");
 		} else {
-			System.out.println("problem");
+			System.out.println("Problem");
 		}
 		InArc a4 = pn.addEmptyArc(p1, t1);
-		System.out.println(t1.isInT(a1));//must return false
-		System.out.println(t1.isInT(a4));//must return true
+		System.out.println("Must return false : "+t1.isInT(a1));//must return false
+		System.out.println("Must return true : "+t1.isInT(a4));//must return true
 	}
 
 }

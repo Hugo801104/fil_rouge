@@ -8,7 +8,7 @@ import fil_rouge.*;
  * @author Pierrick CAUSERET
  * @author Hugo JASMIN
  * 
- * This class try to run a PetriNet without creating an object of type PetriNet
+ * This class tries to run a PetriNet without creating an object of type PetriNet
  */
 public class Test {
 	public static void main(String[] args) {
