@@ -15,6 +15,7 @@ Il y a tout d'abord deux bibliothèque :
  - JUnit 5 : pour faire des tests JUnit.
 Il y a aussi :
  - Le rapport de relecture de nos camarades, complété par nos décisions finales.
+ - La grille d'autoévaluation des bonnes pratiques.
 Il y a ensuite le package src, dans lequel se trouve : 
  - Ce fichier texte README.
  - Le package fil_rouge dans le lequel il y a notre implémentation du PetriNet.
