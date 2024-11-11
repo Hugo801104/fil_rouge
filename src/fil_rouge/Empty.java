@@ -6,6 +6,11 @@ package fil_rouge;
  */
 public class Empty extends InArc{
 	
+	/**
+	 * Initial constructor for an arc
+	 * 
+	 * @param place
+	 */
 	public Empty(Place place) {
 		super(place, 0);
 	}

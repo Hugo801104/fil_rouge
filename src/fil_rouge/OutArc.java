@@ -6,6 +6,12 @@ package fil_rouge;
  */
 public class OutArc extends Arc{
 	
+	/**
+	 * Initial constructor for an arc
+	 * 
+	 * @param place
+	 * @param weight
+	 */
 	public OutArc(Place place, int weight) {
 		super(place, weight);
 	}

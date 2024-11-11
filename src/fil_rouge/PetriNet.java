@@ -24,24 +24,51 @@ public class PetriNet implements IPetriNet {
 		this.transitions = new ArrayList<Transition>();
 	}
 	
+	/**
+	 * Add a place to the PetriNet
+	 * 
+	 * @param Place p
+	 */
 	public Place addPlace(Place p) {
 		this.places.add(p);
 		return(p);
 	}
 	
+	/**
+	 * Remove a place for the PetriNet
+	 * 
+	 * @param Place p
+	 */
 	public void remPlace(Place p) {
 		this.places.remove(p);
 	}
 	
+	/**
+	 * Add a transition to the PetriNet
+	 * 
+	 * @param Transition t
+	 */
 	public Transition addTransition(Transition t) {
 		this.transitions.add(t);
 		return(t);
 	}
 	
+	/**
+	 * Remove a transition from the PetriNet
+	 * 
+	 * @param Transition t
+	 */
 	public void remTransition(Transition t) {
 		this.transitions.remove(t);
 	}
 	
+	/**
+	 * Add an OutArc to the PetriNet between the place p, the transition t with a given weight
+	 * 
+	 * @param Place p
+	 * @param Transition t
+	 * @param int weight
+	 */
 	public OutArc addOutArc(Place p, Transition t, int weight) {
 		OutArc arc = new OutArc(p, weight);
 		//we check if there is already an arc between the place p and the transition t, and decide what to do.
@@ -57,6 +84,13 @@ public class PetriNet implements IPetriNet {
 		}
 	}
 	
+	/**
+	 * Add an InArcNormal to the PetriNet between the place p, the transition t with a given weight
+	 * 
+	 * @param Place p
+	 * @param Transition t
+	 * @param int weight
+	 */
 	public InArc addInArcNormal(Place p, Transition t, int weight) {
 		InArc arc = new InArc(p, weight);
 		if (t.isLinked(p)) {
@@ -74,6 +108,13 @@ public class PetriNet implements IPetriNet {
 		}
 	}
 	
+	/**
+	 * Add an EmptyArc to the PetriNet between the place p, the transition t
+	 * 
+	 * @param Place p
+	 * @param Transition t
+	 * @param int weight
+	 */
 	public Empty addEmptyArc(Place p, Transition t) {
 		Empty arc = new Empty(p);
 		if (t.isLinked(p)) {
@@ -90,6 +131,13 @@ public class PetriNet implements IPetriNet {
 		}
 	}
 	
+	/**
+	 * Add an ZeroArc to the PetriNet between the place p, the transition t
+	 * 
+	 * @param Place p
+	 * @param Transition t
+	 * @param int weight
+	 */
 	public Zero addZeroArc(Place p, Transition t) {
 		Zero arc = new Zero(p);
 		if (t.isLinked(p)) {
@@ -106,6 +154,11 @@ public class PetriNet implements IPetriNet {
 		}
 	}
 	
+	/**
+	 * Remove an Arc from the PetriNet
+	 * 
+	 * @param Arc a
+	 */
 	public void remArc(Arc a) {
 		if (a instanceof InArc) {
 			this.inArcs.remove(a);

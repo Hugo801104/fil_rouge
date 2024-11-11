@@ -25,13 +25,13 @@ public class Test2 {
 		System.out.println("Nombre de jetons final de p1 : "+p1.getTokens());
 		System.out.println("Nombre de jetons final de p2 : "+p2.getTokens());
 		//---------
-		System.out.println("test après modification des méthodes d'ajout d'arcs dans la classe PetriNet");
+		System.out.println("Test après modification des méthodes d'ajout d'arcs dans la classe PetriNet");
 		//---------
 		OutArc a3 = pn.addOutArc(p2, t1, 1);
 		if (a3.equals(a2)) {
-			System.out.println("ok a3 et a2 pointe bien vers le même objet");
+			System.out.println("Ok, a3 et a2 pointent bien vers le même objet");
 		} else {
-			System.out.println("problème");
+			System.out.println("Problème !");
 		}
 		InArc a4 = pn.addEmptyArc(p1, t1);
 		//normalement on a enlevé a1 du PetriNet
