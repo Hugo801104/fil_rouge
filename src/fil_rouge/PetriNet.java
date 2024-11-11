@@ -25,6 +25,38 @@ public class PetriNet implements IPetriNet {
 	}
 	
 	/**
+	 * 
+	 * @return places
+	 */
+	public ArrayList<Place> getPlaces() {
+		return places;
+	}
+
+	/**
+	 * 
+	 * @return outArcs
+	 */
+	public ArrayList<OutArc> getOutArcs() {
+		return outArcs;
+	}
+	
+	/**
+	 * 
+	 * @return inArcs
+	 */
+	public ArrayList<InArc> getInArcs() {
+		return inArcs;
+	}
+
+	/**
+	 * 
+	 * @return transitions
+	 */
+	public ArrayList<Transition> getTransitions() {
+		return transitions;
+	}
+
+	/**
 	 * Add a place to the PetriNet
 	 * 
 	 * @param Place p
@@ -95,11 +127,11 @@ public class PetriNet implements IPetriNet {
 		InArc arc = new InArc(p, weight);
 		if (t.isLinked(p)) {
 			System.out.println("there is already an InArc between t and p");
-			//we remove the arc, and put the new arc (because the old arc can be an specific arc like a Zero arc, by removing it is more simple)
+			//we remove the arc, and put the new arc (because the old arc can be a specific arc like a Zero arc, by removing it is more simple)
 			this.remArc(t.getTheLinkIn(p));
 			this.inArcs.add(arc);
 			t.addInArcNormal(arc);
-			System.out.println("the arc has been change");
+			System.out.println("the arc has been changed");
 			return arc;
 		} else {
 			this.inArcs.add(arc);
@@ -168,7 +200,7 @@ public class PetriNet implements IPetriNet {
 		//now we remove the Arc from the transition it is linked with
 		for (Transition t : this.transitions) {
 			if (t.isInT(a)) {
-				t.remArcT(a);;
+				t.remArcT(a);
 			}
 		}
 	}

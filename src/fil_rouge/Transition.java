@@ -77,8 +77,8 @@ public class Transition {
 			return this.inArcs.contains(a);
 		} else if (a instanceof OutArc) {
 			return this.outArcs.contains(a);
-		} else {//never happen
-			return false;
+		} else {
+			return false; //never happen
 		}
 	}	
 	

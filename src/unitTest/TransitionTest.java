@@ -41,5 +41,38 @@ class TransitionTest {
 		Assertions.assertEquals(p3.getTokens(),2);
 		Assertions.assertEquals(p4.getTokens(),4);
 	}
+	
+	@Test
+	@Order(1)
+	void testIsLinked() {
+		Assertions.assertTrue(t1.isLinked(p1));
+		Assertions.assertFalse(t1.isLinked(p3));
+		Assertions.assertTrue(t1.isLinked(p2));
+	}
+	
+	@Test
+	@Order(2)
+    void testIsInT() {
+        Assertions.assertTrue(t1.isInT(a21));
+        Assertions.assertTrue(t1.isInT(a11));
+        Assertions.assertFalse(t1.isInT(a31));
+	}
 
+	@Test
+	@Order(3)
+	void testRemArcT() {
+		t1.remArcT(a11);
+		t1.remArcT(a21);
+		Assertions.assertFalse(t1.isLinked(p1));
+		Assertions.assertFalse(t1.isLinked(p2));
+	}
+	
+	@Test
+	@Order(4)
+	void testGetTheLink() {
+		Assertions.assertEquals(t1.getTheLinkIn(p2).getWeight(), 21);
+		Assertions.assertEquals(t1.getTheLinkIn(p1), null);
+		Assertions.assertEquals(t1.getTheLinkOut(p1).getWeight(), 5);
+		Assertions.assertEquals(t1.getTheLinkOut(p2), null);
+	}
 }
