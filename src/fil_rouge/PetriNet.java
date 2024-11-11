@@ -72,6 +72,12 @@ public class PetriNet implements IPetriNet {
 		} else if (a instanceof OutArc) {
 			this.outArcs.remove(a);
 		}
+		//now we remove the Arc from the transition it is linked with
+		for (Transition t : this.transitions) {
+			if (t.isInT(a)) {
+				t.remArcT(a);;
+			}
+		}
 	}
 	
 }

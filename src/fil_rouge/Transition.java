@@ -65,4 +65,34 @@ public class Transition {
 		inArcs.add(arc);
 	}
 	
+	
+	/**
+	 * Return true if the Arc a is link to the transition 
+	 * i.e. if a is in this.inArcs or in this.outArcs
+	 * Else return false
+	 * @param a
+	 */
+	public boolean isInT(Arc a) {
+		if (a instanceof InArc) {
+			return this.inArcs.contains(a);
+		} else if (a instanceof OutArc) {
+			return this.outArcs.contains(a);
+		} else {//never happen
+			return false;
+		}
+	}	
+	
+	/**
+	 * Remove the Arc a from the transition
+	 * 
+	 * @param a
+	 */
+	public void remArcT(Arc a) {
+		if (a instanceof InArc) {
+			this.inArcs.remove(a);
+		} else if (a instanceof OutArc) {
+			this.outArcs.remove(a);
+		}
+	}
+	
 }
