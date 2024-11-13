@@ -75,4 +75,11 @@ class TransitionTest {
 		Assertions.assertEquals(t1.getTheLinkOut(p1).getWeight(), 5);
 		Assertions.assertEquals(t1.getTheLinkOut(p2), null);
 	}
+	
+	@Test
+	@Order(5)
+	void testGetters() {
+		Assertions.assertEquals(t1.getInArcs().getFirst(),a21);
+		Assertions.assertEquals(t1.getOutArcs().getFirst(),a11);
+	}
 }
