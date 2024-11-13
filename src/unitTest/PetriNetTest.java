@@ -11,12 +11,14 @@ import fil_rouge.*;
 class PetriNetTest {
     private PetriNet petriNet;
     private Place p1;
+    private Place p2;
     private Transition t1;
 
     @BeforeEach
     void setUp() {
         petriNet = new PetriNet();
         p1 = new Place();
+        p2 = new Place();
         t1 = new Transition();
         petriNet.addTransition(t1);
         petriNet.addPlace(p1);
@@ -32,8 +34,13 @@ class PetriNetTest {
     @Test
     @Order(1)
     void testRemPlace() {
+    	petriNet.addEmptyArc(p1, t1);
+    	petriNet.addOutArc(p2, t1, 7);
         petriNet.remPlace(p1);
+        petriNet.remPlace(p2);
         assertFalse(petriNet.getPlaces().contains(p1));
+        assertEquals(petriNet.getInArcs().size(),0);
+        assertEquals(petriNet.getOutArcs().size(),0);
     }
 
     @Test
@@ -46,8 +53,12 @@ class PetriNetTest {
     @Test
     @Order(3)
     void testRemTransition() {
+    	petriNet.addEmptyArc(p1, t1);
+    	petriNet.addOutArc(p2, t1, 5);
         petriNet.remTransition(t1);
         assertFalse(petriNet.getTransitions().contains(t1));
+        assertEquals(petriNet.getInArcs().size(),0);
+        assertEquals(petriNet.getOutArcs().size(),0);
     }
 
     @Test
