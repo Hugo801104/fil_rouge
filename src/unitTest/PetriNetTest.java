@@ -109,7 +109,7 @@ class PetriNetTest {
         OutArc oa = petriNet.addOutArc(p1, t1, 4);
         petriNet.remArc(oa);
         assertFalse(petriNet.getOutArcs().contains(oa));
-        assertFalse(t1.isInT(oa)); // Il y a une erreur
+        assertFalse(t1.isInT(oa));
     }
 }
 
