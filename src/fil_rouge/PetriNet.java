@@ -71,8 +71,19 @@ public class PetriNet implements IPetriNet {
 	 * 
 	 * @param Place p
 	 */
+	//last modification 13/11 -> remove all the arcs link to the place that is removed
 	public void remPlace(Place p) {
 		this.places.remove(p);
+		for (InArc ai : this.inArcs) {
+			if (ai.getPlace().equals(p)) {
+				this.remArc(ai);
+			}
+		}
+		for (OutArc ao : this.outArcs) {
+			if (ao.getPlace().equals(p)) {
+				this.remArc(ao);
+			}
+		}
 	}
 	
 	/**
@@ -90,8 +101,15 @@ public class PetriNet implements IPetriNet {
 	 * 
 	 * @param Transition t
 	 */
+	//last modification 13/11 -> remove all the arcs link to the transition that is removed
 	public void remTransition(Transition t) {
 		this.transitions.remove(t);
+		for (InArc ai : t.getInArcs()) {
+			this.remArc(ai);
+		}
+		for (OutArc ao : t.getOutArcs()) {
+			this.remArc(ao);
+		}
 	}
 	
 	/**

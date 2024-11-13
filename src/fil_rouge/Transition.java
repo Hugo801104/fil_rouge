@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 public class Transition {
 	
-	public ArrayList<InArc> inArcs;
-	public ArrayList<OutArc> outArcs;
+	private ArrayList<InArc> inArcs;
+	private ArrayList<OutArc> outArcs;
 	
 	/**
 	 * Constructor with a list of inArcs and a list of outArcs
@@ -27,6 +27,20 @@ public class Transition {
 	 */
 	public Transition() {
 		this(new ArrayList<InArc>(), new ArrayList<OutArc>());
+	}
+	
+	/**
+	 * Getter of inArcs
+	 */
+	public ArrayList<InArc> getInArcs(){
+		return this.inArcs;
+	}
+	
+	/**
+	 * Getter of outArcs
+	 */
+	public ArrayList<OutArc> getOutArcs(){
+		return this.outArcs;
 	}
 	
 	/**
