@@ -7,6 +7,7 @@ Ce document est écrit en Français.
 Ce document décrit l'agencement de notre code, son contenu, comment lancer les tests,
 ainsi que quelques remarques pour faire le lien entre notre conception initiale et le code actuel.
 
+Attention, commentaire sur MAJ du 13/11 à la fin
 
 1) Agencement et contenu : 
 
@@ -54,3 +55,7 @@ qu'il n'y a pas déjà un arc entre la place et la transition donner en paramèt
 Si non, on ajoutera simplemment l'arc.
 Si oui, on remplacera l'ancien arc par le nouveau. 
 De cette façon, il ne peut pas y avoir deux arcs qui relient une place et une transition. 
+
+MAJ du 13/11:
+Nous avons rajouté des getters à la classe Transition, nous avons modifié les méthodes remPlace() et remTransition de la classe PetriNet
+et nous avons ajouté un diagramme UML que nous avons obtenu en testant ObjectAid. 
