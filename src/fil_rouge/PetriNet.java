@@ -73,20 +73,6 @@ public class PetriNet implements IPetriNet {
 	 * @param Place p
 	 */
 	public void remPlace(Place p) {
-		for (Iterator<InArc> iterator = this.inArcs.iterator(); iterator.hasNext();) {
-	        InArc a = iterator.next();
-	        if (a.getPlace().equals(p)) {
-	            iterator.remove();
-	            this.remArc(a);
-	        }
-	    }
-	    for (Iterator<OutArc> iterator = this.outArcs.iterator(); iterator.hasNext();) {
-	        OutArc a = iterator.next();
-	        if (a.getPlace().equals(p)) {
-	            iterator.remove();
-	            this.remArc(a);
-	        }
-	    }
 		this.places.remove(p);
 	}
 	
@@ -107,20 +93,6 @@ public class PetriNet implements IPetriNet {
 	 */
 	public void remTransition(Transition t) {
 		this.transitions.remove(t);
-		for (Iterator<InArc> iterator = this.inArcs.iterator(); iterator.hasNext();) {
-	        Arc a = iterator.next();
-	        if (t.isInT(a)) {
-	            iterator.remove();
-	            this.remArc(a);
-	        }
-	    }
-	    for (Iterator<OutArc> iterator = this.outArcs.iterator(); iterator.hasNext();) {
-	        Arc a = iterator.next();
-	        if (t.isInT(a)) {
-	            iterator.remove();
-	            this.remArc(a);
-	        }
-	    }
 	}
 	
 	/**
