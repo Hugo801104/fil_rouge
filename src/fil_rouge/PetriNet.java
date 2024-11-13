@@ -1,6 +1,7 @@
 package fil_rouge;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @author Pierrick CAUSERET
@@ -74,16 +75,20 @@ public class PetriNet implements IPetriNet {
 	//last modification 13/11 -> remove all the arcs link to the place that is removed
 	public void remPlace(Place p) {
 		this.places.remove(p);
-		for (InArc ai : this.inArcs) {
-			if (ai.getPlace().equals(p)) {
-				this.remArc(ai);
-			}
-		}
-		for (OutArc ao : this.outArcs) {
-			if (ao.getPlace().equals(p)) {
-				this.remArc(ao);
-			}
-		}
+		for (Iterator<InArc> iterator = this.inArcs.iterator(); iterator.hasNext();) {
+	        InArc a = iterator.next();
+	        if (a.getPlace().equals(p)) {
+	            iterator.remove();
+	            this.remArc(a);
+	        }
+	    }
+	    for (Iterator<OutArc> iterator = this.outArcs.iterator(); iterator.hasNext();) {
+	        OutArc a = iterator.next();
+	        if (a.getPlace().equals(p)) {
+	            iterator.remove();
+	            this.remArc(a);
+	        }
+	    }
 	}
 	
 	/**
