@@ -1,38 +1,40 @@
-// ---------------------
-// README pour le Fil Rouge
-// ---------------------
+#Fil rouge Petri Net
 
-Ce document est écrit en Français.
 
-Ce document décrit l'agencement de notre code, son contenu, comment lancer les tests,
-ainsi que quelques remarques pour faire le lien entre notre conception initiale et le code actuel.
 
-Attention, commentaire sur MAJ du 13/11 à la fin
+*Ce document est écrit en Français.*
 
-1) Agencement et contenu : 
+*Ce document décrit l'agencement du code, son contenu, la méthodologie de lancement des tests, ainsi que quelques remarques pour faire le lien entre la conception initiale et le code actuel.*
 
-Il y a tout d'abord deux bibliothèque :
- - JRE System Library : celle du jdk 21 (la version d'Eclipse et du JRE qu'on utilise est celle-ci).
- - JUnit 5 : pour faire des tests JUnit.
+###Agencement et contenu
+
+Il y a tout d'abord deux bibliothèques :
+<ul>
+	<li>JRE System Library : celle du jdk 21 (la version d'Eclipse et du JRE qu'on utilise est celle-ci).
+	<li>JUnit 5 : pour faire des tests JUnit.
+</ul>
 Il y a aussi :
- - Le rapport de relecture de nos camarades, complété par nos décisions finales.
- - La grille d'autoévaluation des bonnes pratiques.
+<ul>
+	<li>Le rapport de relecture de nos camarades, complété par nos décisions finales.
+	<li>La grille d'autoévaluation des bonnes pratiques.
+</ul>
 Il y a ensuite le package src, dans lequel se trouve : 
- - Ce fichier texte README.
- - Le package fil_rouge dans le lequel il y a notre implémentation du PetriNet.
- - Le package unitTest dans lequel nous avons fait des tests JUnit.
- - Le package test dans lequel nous avons fait quelques tests avec des méthodes main, pour nous aider dans la compréhension et rédaction de notre code.
+<ul>
+	<li>Ce fichier texte README.
+	<li>Le package fil_rouge dans le lequel il y a notre implémentation du PetriNet.
+	<li>Le package unitTest dans lequel nous avons fait des tests JUnit.
+	<li>Le package test dans lequel nous avons fait quelques tests avec des méthodes main, pour nous aider dans la compréhension et rédaction de notre code.
+</ul>
 
-
-2) Comment lancer notre code et lancer les test :
+###Lancement du code et des tests :
 
 Il suffit de :
- - Lancer la méthode main d'un des fichiers de package test, en cliquant sur Run As Java Application sur le fichier.
- - Ou
- - Lancer les tests JUnit d'un ou de tout les fichiers du package unitTest, en cliquant sur Coverage As JUnit Test (pour avoir la couverture des tests).
+<ol>
+	<li>Lancer la méthode main d'un des fichiers de package test, en cliquant sur Run As Java Application sur le fichier.
+	<li>Lancer les tests JUnit d'un ou de tout les fichiers du package unitTest, en cliquant sur Coverage As JUnit Test (pour avoir la couverture des tests).
+</ol>
 
-
-3) Lien entre le code actuel et la conception initiale (diagramme de classe UML) : 
+###Lien entre le code actuel et la conception initiale (diagramme de classe UML) : 
 
 Notre code ne représente pas exactement le diagramme de classe que nous avions construit initialement.
 Il y a trois différences majeures :
