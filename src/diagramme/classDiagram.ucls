@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="fil_rouge.InArc" project="fil_rouge" file="/fil_rouge/src/fil_rouge/InArc.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="279" y="990"/>    
+    <position height="-1" width="-1" x="131" y="815"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,195 +12,163 @@
   </class>  
   <class id="2" language="java" name="fil_rouge.Zero" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Zero.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="157" y="1154"/>    
+    <position height="-1" width="-1" x="92" y="1043"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="3" language="java" name="diagramme" project="fil_rouge" file="/fil_rouge/src/diagramme" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="89" y="58"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="4" language="java" name="fil_rouge.NegativeTokensException" project="fil_rouge" 
+  <class id="3" language="java" name="fil_rouge.NegativeTokensException" project="fil_rouge" 
     file="/fil_rouge/src/fil_rouge/NegativeTokensException.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="281" y="89"/>    
+    <position height="-1" width="-1" x="230" y="75"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="fil_rouge.OutArc" project="fil_rouge" file="/fil_rouge/src/fil_rouge/OutArc.java" 
+  <class id="4" language="java" name="fil_rouge.OutArc" project="fil_rouge" file="/fil_rouge/src/fil_rouge/OutArc.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="689" y="990"/>    
+    <position height="-1" width="-1" x="833" y="755"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="fil_rouge.IPetriNet" project="fil_rouge" 
+  <interface id="5" language="java" name="fil_rouge.IPetriNet" project="fil_rouge" 
     file="/fil_rouge/src/fil_rouge/IPetriNet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="996" y="142"/>    
+    <position height="-1" width="-1" x="148" y="301"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="fil_rouge.Empty" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Empty.java" 
+  <class id="6" language="java" name="fil_rouge.Empty" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Empty.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="368" y="1152"/>    
+    <position height="-1" width="-1" x="319" y="1041"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="fil_rouge.Place" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Place.java" 
+  <class id="7" language="java" name="fil_rouge.Place" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Place.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="78" y="636"/>    
+    <position height="-1" width="-1" x="1115" y="948"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="fil_rouge.PetriNet" project="fil_rouge" 
+  <class id="8" language="java" name="fil_rouge.PetriNet" project="fil_rouge" 
     file="/fil_rouge/src/fil_rouge/PetriNet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="558" y="137"/>    
+    <position height="-1" width="-1" x="630" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="fil_rouge.Transition" project="fil_rouge" 
+  <class id="9" language="java" name="fil_rouge.Transition" project="fil_rouge" 
     file="/fil_rouge/src/fil_rouge/Transition.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="550" y="521"/>    
+    <position height="-1" width="-1" x="487" y="545"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="fil_rouge.Arc" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Arc.java" 
+  <class id="10" language="java" name="fil_rouge.Arc" project="fil_rouge" file="/fil_rouge/src/fil_rouge/Arc.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="478" y="787"/>    
+    <position height="-1" width="-1" x="366" y="820"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
   <association id="12">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="13" name="inArcs">        
-        <position height="0" width="0" x="-524" y="170"/>      
-      </attribute>      
-      <multiplicity id="14" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-524" y="170"/>      
-      </multiplicity>    
+      <attribute id="13" name="inArcs"/>      
+      <multiplicity id="14" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="16">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <realization id="17">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <association id="18">    
-    <bendpoint x="220" y="423"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="19" name="places">        
-        <position height="0" width="0" x="-220" y="-211"/>      
-      </attribute>      
-      <multiplicity id="20" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-220" y="-211"/>      
-      </multiplicity>    
+  <association id="15">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="16" name="transitions"/>      
+      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <bendpoint x="862" y="384"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="19" name="places"/>      
+      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="21">    
-    <bendpoint x="1087" y="423"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="22" name="outArcs">        
-        <position height="0" width="0" x="-335" y="179"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-335" y="179"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="24">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="25" name="place">        
-        <position height="0" width="0" x="-220" y="-211"/>      
-      </attribute>      
-      <multiplicity id="26" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-220" y="-211"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="28" name="inArcs">        
-        <position height="0" width="0" x="-524" y="170"/>      
-      </attribute>      
-      <multiplicity id="29" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-524" y="170"/>      
-      </multiplicity>    
+    <bendpoint x="306" y="384"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="22" name="inArcs"/>      
+      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="30">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="31" name="transitions">        
-        <position height="0" width="0" x="-356" y="-45"/>      
-      </attribute>      
-      <multiplicity id="32" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-356" y="-45"/>      
-      </multiplicity>    
+  <generalization id="24">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <realization id="25">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="26">    
+    <bendpoint x="668" y="384"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="27" name="outArcs"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="33">    
+  <association id="29">    
     <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="34" name="outArcs">        
-        <position height="0" width="0" x="-335" y="179"/>      
-      </attribute>      
-      <multiplicity id="35" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-335" y="179"/>      
-      </multiplicity>    
+      <attribute id="30" name="place"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="33">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="34" name="outArcs"/>      
+      <multiplicity id="35" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="36">    
-    <end type="SOURCE" refId="7"/>    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="11"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
